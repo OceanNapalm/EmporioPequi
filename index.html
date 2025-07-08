@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empório Pequi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Empório Pequi</h1>
+    <nav>
+      <ul>
+        <li><a href="#bebidas">Bebidas</a></li>
+        <li><a href="#higiene">Higiene</a></li>
+        <li><a href="#limpeza">Limpeza</a></li>
+        <li><input type="text" id="search" placeholder="Buscar..."></li>
+        <li><button onclick="toggleCart()">🛒 <span id="cart-count">0</span></button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bebidas">
+      <h2>Bebidas</h2>
+      <div class="product" data-name="Coca-Cola 2L">
+        <p>Coca-Cola 2L - R$ 9,99</p>
+        <button onclick="addToCart('Coca-Cola 2L', 9.99)">Adicionar</button>
+      </div>
+    </section>
+
+    <section id="higiene">
+      <h2>Higiene</h2>
+      <div class="product" data-name="Sabonete Lux">
+        <p>Sabonete Lux - R$ 2,50</p>
+        <button onclick="addToCart('Sabonete Lux', 2.50)">Adicionar</button>
+      </div>
+    </section>
+
+    <section id="limpeza">
+      <h2>Limpeza</h2>
+      <div class="product" data-name="Desinfetante">
+        <p>Desinfetante - R$ 5,00</p>
+        <button onclick="addToCart('Desinfetante', 5.00)">Adicionar</button>
+      </div>
+    </section>
+  </main>
+
+  <aside id="cart" class="hidden">
+    <h2>Carrinho</h2>
+    <ul id="cart-items"></ul>
+    <button onclick="sendWhatsApp()">Finalizar pelo WhatsApp</button>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 Empório Pequi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
